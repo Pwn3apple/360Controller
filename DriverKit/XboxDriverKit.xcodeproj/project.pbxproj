@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		250519E148BBEEA0F3BA4F7D /* XboxGamepadDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0AED117D67F89312D05874B /* XboxGamepadDriver.cpp */; };
+		6336CF5CA7579CF13AE951A1 /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF19CE43501C70ED4E632100 /* USBDriverKit.framework */; };
+		6565615EBCE74F5CF022318F /* XboxProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66B9A77DEF3F2848D26AF9AB /* XboxProtocol.cpp */; };
+		6B117723E36187E3EF4BF1C3 /* XboxGamepadDriver.iig in Sources */ = {isa = PBXBuildFile; fileRef = 22FD534919D375FFF93F82C3 /* XboxGamepadDriver.iig */; };
+		79A49978FACF697D48994E56 /* HIDDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E361612F722150777C8A28 /* HIDDriverKit.framework */; };
+		7BCA4A804BA152236E3D0E4B /* XboxGamepadUserClient.iig in Sources */ = {isa = PBXBuildFile; fileRef = E153FF46A11E29BAB2D45E04 /* XboxGamepadUserClient.iig */; };
+		A4831297A8E0F6253B180153 /* XboxDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326A2E282BB2A2F7EE9892D /* XboxDriverApp.swift */; };
+		D5D497DBE1403D95E1A1DEC6 /* XboxGamepadDriver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = CCBBF48639D256133AD6ABB3 /* XboxGamepadDriver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9BB86BBA2A92FCF778E9B8F /* XboxGamepadUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2D819B117EE1863C0D847D1 /* XboxGamepadUserClient.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		577A2E71E8F2AF1FD82B35A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6F0FA99863CA3B3294D3499 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68C635C420E733BBBCE74228;
+			remoteInfo = XboxGamepadDriver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5CC00FA650809EC47DD0A45 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				D5D497DBE1403D95E1A1DEC6 /* XboxGamepadDriver.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		22FD534919D375FFF93F82C3 /* XboxGamepadDriver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = XboxGamepadDriver.iig; sourceTree = "<group>"; };
+		51C4F1FCA62167289D4A5357 /* XboxProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XboxProtocol.h; sourceTree = "<group>"; };
+		66B9A77DEF3F2848D26AF9AB /* XboxProtocol.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XboxProtocol.cpp; sourceTree = "<group>"; };
+		69E361612F722150777C8A28 /* HIDDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDDriverKit.framework; path = System/Library/Frameworks/HIDDriverKit.framework; sourceTree = SDKROOT; };
+		6D616498E1EEE2A7C5BA77D3 /* XboxDriverApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XboxDriverApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B326A2E282BB2A2F7EE9892D /* XboxDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XboxDriverApp.swift; sourceTree = "<group>"; };
+		BF19CE43501C70ED4E632100 /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = System/Library/Frameworks/USBDriverKit.framework; sourceTree = SDKROOT; };
+		CCBBF48639D256133AD6ABB3 /* XboxGamepadDriver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = XboxGamepadDriver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3BCA7FFF29EE4FAC2E06E5 /* XboxDriverShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XboxDriverShared.h; sourceTree = "<group>"; };
+		E153FF46A11E29BAB2D45E04 /* XboxGamepadUserClient.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = XboxGamepadUserClient.iig; sourceTree = "<group>"; };
+		F0AED117D67F89312D05874B /* XboxGamepadDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XboxGamepadDriver.cpp; sourceTree = "<group>"; };
+		F2D819B117EE1863C0D847D1 /* XboxGamepadUserClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XboxGamepadUserClient.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		815807E3EB480BA7BAC57370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79A49978FACF697D48994E56 /* HIDDriverKit.framework in Frameworks */,
+				6336CF5CA7579CF13AE951A1 /* USBDriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AF8F03B6C89E43EB4640A86 = {
+			isa = PBXGroup;
+			children = (
+				DFCD7B146BB21D212F2414DE /* Core */,
+				BE3FB20657B30FAF31B59A57 /* Dext */,
+				51DBF5EFAD992CAFC9C849CB /* HostApp */,
+				2B4DB83F3E15A9CE9BE2B7AB /* Shared */,
+				F06233ABDDEE508ECFFD003C /* Frameworks */,
+				B4D49AC2B4E25DA1A27F2971 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B4DB83F3E15A9CE9BE2B7AB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DB3BCA7FFF29EE4FAC2E06E5 /* XboxDriverShared.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		51DBF5EFAD992CAFC9C849CB /* HostApp */ = {
+			isa = PBXGroup;
+			children = (
+				B326A2E282BB2A2F7EE9892D /* XboxDriverApp.swift */,
+			);
+			path = HostApp;
+			sourceTree = "<group>";
+		};
+		B4D49AC2B4E25DA1A27F2971 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D616498E1EEE2A7C5BA77D3 /* XboxDriverApp.app */,
+				CCBBF48639D256133AD6ABB3 /* XboxGamepadDriver.dext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE3FB20657B30FAF31B59A57 /* Dext */ = {
+			isa = PBXGroup;
+			children = (
+				F0AED117D67F89312D05874B /* XboxGamepadDriver.cpp */,
+				22FD534919D375FFF93F82C3 /* XboxGamepadDriver.iig */,
+				F2D819B117EE1863C0D847D1 /* XboxGamepadUserClient.cpp */,
+				E153FF46A11E29BAB2D45E04 /* XboxGamepadUserClient.iig */,
+			);
+			path = Dext;
+			sourceTree = "<group>";
+		};
+		DFCD7B146BB21D212F2414DE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				66B9A77DEF3F2848D26AF9AB /* XboxProtocol.cpp */,
+				51C4F1FCA62167289D4A5357 /* XboxProtocol.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F06233ABDDEE508ECFFD003C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69E361612F722150777C8A28 /* HIDDriverKit.framework */,
+				BF19CE43501C70ED4E632100 /* USBDriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68C635C420E733BBBCE74228 /* XboxGamepadDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AFCF9503E505C91FD15DA66 /* Build configuration list for PBXNativeTarget "XboxGamepadDriver" */;
+			buildPhases = (
+				C83D309B38F478396BDB5237 /* Sources */,
+				815807E3EB480BA7BAC57370 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XboxGamepadDriver;
+			packageProductDependencies = (
+			);
+			productName = XboxGamepadDriver;
+			productReference = CCBBF48639D256133AD6ABB3 /* XboxGamepadDriver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
+		D5612EB7BDE9C64A9327B909 /* XboxDriverApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A074781CF9DEEEB49622CE11 /* Build configuration list for PBXNativeTarget "XboxDriverApp" */;
+			buildPhases = (
+				8147647183A2E608BAF486A4 /* Sources */,
+				F5CC00FA650809EC47DD0A45 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78698670D95D28A31BE5ED44 /* PBXTargetDependency */,
+			);
+			name = XboxDriverApp;
+			packageProductDependencies = (
+			);
+			productName = XboxDriverApp;
+			productReference = 6D616498E1EEE2A7C5BA77D3 /* XboxDriverApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6F0FA99863CA3B3294D3499 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					68C635C420E733BBBCE74228 = {
+						ProvisioningStyle = Automatic;
+					};
+					D5612EB7BDE9C64A9327B909 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 180D14A9B4B26DB47886BE49 /* Build configuration list for PBXProject "XboxDriverKit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2AF8F03B6C89E43EB4640A86;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B4D49AC2B4E25DA1A27F2971 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68C635C420E733BBBCE74228 /* XboxGamepadDriver */,
+				D5612EB7BDE9C64A9327B909 /* XboxDriverApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8147647183A2E608BAF486A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4831297A8E0F6253B180153 /* XboxDriverApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83D309B38F478396BDB5237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250519E148BBEEA0F3BA4F7D /* XboxGamepadDriver.cpp in Sources */,
+				6B117723E36187E3EF4BF1C3 /* XboxGamepadDriver.iig in Sources */,
+				F9BB86BBA2A92FCF778E9B8F /* XboxGamepadUserClient.cpp in Sources */,
+				7BCA4A804BA152236E3D0E4B /* XboxGamepadUserClient.iig in Sources */,
+				6565615EBCE74F5CF022318F /* XboxProtocol.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78698670D95D28A31BE5ED44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68C635C420E733BBBCE74228 /* XboxGamepadDriver */;
+			targetProxy = 577A2E71E8F2AF1FD82B35A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6E2E7BF4EF1B8E9945B29B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		71E3B6DD4BEE7FC189E192A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HostApp/XboxDriverApp.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xbox Controller Driver";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "GPL v2 or later";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mice.driver.XboxDriverApp;
+				PRODUCT_NAME = XboxDriverApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C867C820645E6C1C11C69065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Dext/XboxGamepadDriver.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 22.0;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dext/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mice.driver.XboxGamepadDriver;
+				PRODUCT_NAME = com.mice.driver.XboxGamepadDriver;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = driverkit;
+				SUPPORTED_PLATFORMS = driverkit;
+			};
+			name = Debug;
+		};
+		CC0F9F2F56F439B89A54F6FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HostApp/XboxDriverApp.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xbox Controller Driver";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "GPL v2 or later";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mice.driver.XboxDriverApp;
+				PRODUCT_NAME = XboxDriverApp;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F9B3A49DF1C40B80FD00431B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Dext/XboxGamepadDriver.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DRIVERKIT_DEPLOYMENT_TARGET = 22.0;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dext/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mice.driver.XboxGamepadDriver;
+				PRODUCT_NAME = com.mice.driver.XboxGamepadDriver;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = driverkit;
+				SUPPORTED_PLATFORMS = driverkit;
+			};
+			name = Release;
+		};
+		FD71F2322EB043D293338E9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		180D14A9B4B26DB47886BE49 /* Build configuration list for PBXProject "XboxDriverKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2E7BF4EF1B8E9945B29B9A /* Debug */,
+				FD71F2322EB043D293338E9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3AFCF9503E505C91FD15DA66 /* Build configuration list for PBXNativeTarget "XboxGamepadDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C867C820645E6C1C11C69065 /* Debug */,
+				F9B3A49DF1C40B80FD00431B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A074781CF9DEEEB49622CE11 /* Build configuration list for PBXNativeTarget "XboxDriverApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0F9F2F56F439B89A54F6FA /* Debug */,
+				71E3B6DD4BEE7FC189E192A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6F0FA99863CA3B3294D3499 /* Project object */;
+}

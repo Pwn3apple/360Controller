@@ -59,6 +59,18 @@ on macOS versions that no longer load third-party kexts.
 
 ## Building (on a Mac with Xcode 15 or later)
 
+Steps 1–3 are already done: `XboxDriverKit.xcodeproj` (generated from
+`project.yml` with [XcodeGen](https://github.com/yonaskolb/XcodeGen)) is part of
+`360Driver.xcworkspace` and has the `XboxGamepadDriver` dext and `XboxDriverApp`
+targets. After editing `project.yml`, run `xcodegen generate` in `DriverKit/`.
+For a compile check without signing:
+
+```bash
+xcodebuild -workspace 360Driver.xcworkspace -scheme XboxDriverApp CODE_SIGNING_ALLOWED=NO build
+```
+
+The original manual steps, for reference:
+
 1. In Xcode, add a **DriverKit Driver** target named `XboxGamepadDriver` to
    `360Driver.xcworkspace`. Use bundle ID `com.mice.driver.XboxGamepadDriver`,
    or change `driverIdentifier` in `HostApp/XboxDriverApp.swift` to match.

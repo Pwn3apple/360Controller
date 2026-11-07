@@ -225,7 +225,7 @@ bool XboxGamepadDriver::handleStart(IOService *provider)
 
     // Select the first configuration. Xbox pads are bDeviceClass 0xFF, so
     // nothing else in the system configures them.
-    const IOUSBConfigurationDescriptor *cd = iv->device->CopyConfigurationDescriptor(0);
+    const IOUSBConfigurationDescriptor *cd = iv->device->CopyConfigurationDescriptor(static_cast<uint8_t>(0));
     if (cd == nullptr) {
         Log("no configuration descriptor");
         return false;
@@ -429,7 +429,7 @@ kern_return_t XboxGamepadDriver::setReport(IOMemoryDescriptor *report,
 
     // Asynchronous requests carry an action and must be completed.
     if (action != nullptr)
-        completeReport(action, ret, static_cast<uint32_t>(length));
+        CompleteReport(action, ret, static_cast<uint32_t>(length));
     return ret;
 }
 
@@ -441,7 +441,7 @@ kern_return_t XboxGamepadDriver::getReport(IOMemoryDescriptor *report,
 {
     (void)report; (void)reportType; (void)options; (void)completionTimeout;
     if (action != nullptr)
-        completeReport(action, kIOReturnUnsupported, 0);
+        CompleteReport(action, kIOReturnUnsupported, 0);
     return kIOReturnUnsupported;
 }
 

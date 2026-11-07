@@ -4,4 +4,7 @@
    <FileRef
       location = "group:360 Driver.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:DriverKit/XboxDriverKit.xcodeproj">
+   </FileRef>
 </Workspace>
