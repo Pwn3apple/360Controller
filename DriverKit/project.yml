@@ -1,0 +1,62 @@
+# XcodeGen spec for the DriverKit port. Regenerate the project with:
+#   cd DriverKit && xcodegen generate
+# XboxDriverKit.xcodeproj is referenced from ../360Driver.xcworkspace.
+name: XboxDriverKit
+options:
+  bundleIdPrefix: com.mice.driver
+  createIntermediateGroups: true
+  deploymentTarget:
+    macOS: "13.0"
+settings:
+  base:
+    CLANG_CXX_LANGUAGE_STANDARD: c++17
+    GCC_WARN_UNUSED_VARIABLE: YES
+    CODE_SIGN_STYLE: Automatic
+targets:
+  XboxGamepadDriver:
+    type: driver-extension
+    platform: macOS
+    sources:
+      - path: Dext
+        excludes:
+          - Info.plist
+          - "*.entitlements"
+      - path: Core/XboxProtocol.cpp
+      - path: Core/XboxProtocol.h
+      - path: Shared/XboxDriverShared.h
+    dependencies:
+      - sdk: HIDDriverKit.framework
+      - sdk: USBDriverKit.framework
+    settings:
+      base:
+        SDKROOT: driverkit
+        SUPPORTED_PLATFORMS: driverkit
+        DRIVERKIT_DEPLOYMENT_TARGET: "22.0"
+        MACOSX_DEPLOYMENT_TARGET: ""
+        PRODUCT_BUNDLE_IDENTIFIER: com.mice.driver.XboxGamepadDriver
+        PRODUCT_NAME: com.mice.driver.XboxGamepadDriver
+        INFOPLIST_FILE: Dext/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_ENTITLEMENTS: Dext/XboxGamepadDriver.entitlements
+        RUN_CLANG_STATIC_ANALYZER: NO
+
+  XboxDriverApp:
+    type: application
+    platform: macOS
+    sources:
+      - path: HostApp
+        excludes:
+          - "*.entitlements"
+    dependencies:
+      - target: XboxGamepadDriver
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mice.driver.XboxDriverApp
+        PRODUCT_NAME: XboxDriverApp
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Xbox Controller Driver
+        INFOPLIST_KEY_NSHumanReadableCopyright: GPL v2 or later
+        CODE_SIGN_ENTITLEMENTS: HostApp/XboxDriverApp.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        SWIFT_VERSION: "5.0"

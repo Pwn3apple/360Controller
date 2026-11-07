@@ -1,0 +1,60 @@
+/*
+ Xbox controller DriverKit port - HID driver for wired Xbox 360, original
+ Xbox and Xbox One (USB) controllers.
+
+ Replaces the Xbox360Peripheral + Xbox360ControllerClass kernel extension
+ classes. Matches the IOUSBHostDevice by vendor/product ID (see Info.plist),
+ selects the configuration, claims the gamepad interface and publishes a
+ single HID gamepad whose report format is unchanged from the kext.
+
+ GPL v2 or later, see Licence.txt.
+ */
+#ifndef XboxGamepadDriver_h
+#define XboxGamepadDriver_h
+
+#include <Availability.h>
+#include <DriverKit/IOService.iig>
+#include <DriverKit/IOUserClient.iig>
+#include <HIDDriverKit/IOUserHIDDevice.iig>
+#include <USBDriverKit/IOUSBHostPipe.iig>
+
+class XboxGamepadDriver : public IOUserHIDDevice
+{
+public:
+    virtual bool init() override;
+    virtual void free() override;
+
+    virtual kern_return_t Start(IOService *provider) override;
+    virtual kern_return_t Stop(IOService *provider) override;
+
+    virtual kern_return_t NewUserClient(uint32_t type, IOUserClient **userClient) override;
+
+    // IOUserHIDDevice
+    virtual bool handleStart(IOService *provider) override;
+    virtual OSDictionary *newDeviceDescription(void) override;
+    virtual OSData *newReportDescriptor(void) override;
+    virtual kern_return_t setReport(IOMemoryDescriptor *report,
+                                    IOHIDReportType reportType,
+                                    IOOptionBits options,
+                                    uint32_t completionTimeout,
+                                    OSAction *action) override;
+    virtual kern_return_t getReport(IOMemoryDescriptor *report,
+                                    IOHIDReportType reportType,
+                                    IOOptionBits options,
+                                    uint32_t completionTimeout,
+                                    OSAction *action) override;
+
+    // Interrupt-IN completion
+    virtual void ReadComplete(OSAction *action,
+                              IOReturn status,
+                              uint32_t actualByteCount,
+                              uint64_t completionTimestamp) TYPE(IOUSBHostPipe::CompleteAsyncIO);
+
+    // Called by XboxGamepadUserClient (same process). Buffers hold an
+    // XboxSettings / XboxDeviceInfo from Shared/XboxDriverShared.h.
+    kern_return_t CopySettings(void *buffer, size_t length) LOCALONLY;
+    kern_return_t ApplySettings(const void *buffer, size_t length) LOCALONLY;
+    kern_return_t CopyDeviceInfo(void *buffer, size_t length) LOCALONLY;
+};
+
+#endif /* XboxGamepadDriver_h */
